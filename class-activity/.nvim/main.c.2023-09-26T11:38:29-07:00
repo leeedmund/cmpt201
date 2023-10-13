@@ -1,0 +1,35 @@
+// main .c
+//
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main() {
+  // int true = 1;
+  fork();
+  int value = fork();
+  // printf("%d", value);
+  
+  printf("parent: %d\n", getpid());
+
+  //printf("%d", getpid());
+  //printf("\n");
+  //printf("%d", getppid());
+
+  // if (fork() == 1) {
+
+  // printf("parent: %d\n", getpid());
+  // }
+  // getpid
+  // getppid
+  // parent process: print out parent and pid of the child
+  // child process print out child and the pid of the parent
+  //
+  //
+  // use:
+  // return value from fork()
+  // getpid()
+  // getppid()
+  //  printf("parent: %d\n", );
+}

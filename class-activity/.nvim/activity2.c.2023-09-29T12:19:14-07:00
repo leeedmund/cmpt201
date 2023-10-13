@@ -1,0 +1,18 @@
+// interprocess communication - ipc
+// way to communicate between different processes
+
+// raise(3)
+// kill(2)
+
+/* write a program that crates a child process.
+ * the program should use sigaction() and install a signal handler that catches SIGINT and 
+ * prints out CTRL-C pressed.
+ * The parent should run on infinite loop with sleep(). 
+ * the child should have an infinite loop that periodically sends signint to the parent (with sleep(). 
+ * expierment with ctrl c as well. 
+ * use write instead of printf. 
+ * The file descriptor for stdout is stdout_fileno 
+ * man sigsetops 
+ * use btop to kill processes
+  */
+

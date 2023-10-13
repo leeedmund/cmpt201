@@ -1,0 +1,14 @@
+//main .c
+//
+
+#include <unistd.h>
+#include <sys/types.h>
+
+int main() {
+  //int true = 1;
+  fork();
+  while (1 > 0) 
+  {
+    sleep(1);
+  }
+}

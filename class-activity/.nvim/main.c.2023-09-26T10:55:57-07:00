@@ -1,0 +1,11 @@
+//main .c
+//
+
+#include <unistd.h>
+
+int main() {
+  int true = 1;
+  while (true) {
+    sleep(1);
+  }
+}

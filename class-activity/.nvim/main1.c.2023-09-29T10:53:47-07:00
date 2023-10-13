@@ -1,0 +1,24 @@
+
+
+#include <unistd.h>
+#include <stdio.h>
+
+int main () {
+ //write a program that calls one of 'exec' functions that executes 'ls -al'
+ //"" "" "" 
+ //if parent, calls any one of 'exec' functions that executes 'ls -al'
+ //if child, calls any one of 'exec' functions that executes 'exa -al'
+ 
+ // char *programName = "ls";
+  //char *arg1 = "-al";
+  //char *arg2 = "/home/cmpt201/class-activity";
+
+  //int value = execlp("/home/cmpt201/class-activity","ls -al",NULL);
+  //printf("%d\n", value);
+  //execl ("/bin/ls", "ls", "-al", "/home/cmpt201/class-activity", NULL);
+execl ("/bin/ls", "ls", "-al", ".", NULL);
+//  execl ("/home/cmpt201/class-activity", "ls -al", NULL);
+//
+
+}
+

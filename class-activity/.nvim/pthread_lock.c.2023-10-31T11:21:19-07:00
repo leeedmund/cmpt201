@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+
+pthread_mutex_t mutex;
+
+int count = 0;
+
+void increment() {
+  pthread_mutex_lock(&mutex);
+  for (int i = 0; i < 10000000; i++) {
+    count++;
+  }  
+  pthread_mutex_unlock(&mutex);
+  
+}
+
+int main() { 
+  mutex = PTHREAD_MUTEX_INITIALIZER;
+  int temp;
+  pthread_mutex_lock(&mutex);
+  temp = count;
+  pthread_mutex_unlock(&mutex);
+  printf("Count: %d\n", temp);
+
+}

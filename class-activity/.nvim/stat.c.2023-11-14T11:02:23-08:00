@@ -1,0 +1,42 @@
+// write a program that
+//
+// receives one command line aargument (file path)
+// uses stat() to et the file type (either regular file or directory)
+// print out the file type
+
+// man inode
+// man 2stat
+//
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <sys/sysmacros.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main(int argc, char *argv[]) {
+  struct stat sb;
+  if (argc != 2) {
+    exit(EXIT_FAILURE);
+  }
+
+  if (!stat(argv[1], &sb) == -1) {
+    exit(EXIT_FAILURE);
+  }
+
+  printf("File Type:\n");
+  switch (sb.st_mode & S_IFMT) {
+  case S_IFBLK:
+    printf("Block\n");
+    break;
+  case S_IFCHR:
+    printf("Character Device\n");
+    break;
+  case S_IFDIR:
+    printf("Directory\n");
+    break;
+  default:
+    printf("Unknown\n");
+    break;
+  }
+}

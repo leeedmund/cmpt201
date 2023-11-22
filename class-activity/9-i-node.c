@@ -1,12 +1,9 @@
-// write a program that
-//
-// receives one command line aargument (file path)
-// uses stat() to et the file type (either regular file or directory)
-// print out the file type
 
-// man inode
-// man 2stat
-//
+/*
+Activity: use stat() to retrieve and display the file type of a regular file and a directory. 
+Read man inode, especially about st_mode.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
